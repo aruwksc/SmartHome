@@ -1,6 +1,6 @@
-package org.example.smarthome;
+package org.example.smarthome.device;
 
-public class SecurityCamera implements Device{
+public class SecurityCamera implements Device {
     private boolean isRecording;
 
     public SecurityCamera(){

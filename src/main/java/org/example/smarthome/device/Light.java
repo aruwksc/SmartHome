@@ -1,4 +1,4 @@
-package org.example.smarthome;
+package org.example.smarthome.device;
 
 public class Light implements Device {
     private boolean isOn;

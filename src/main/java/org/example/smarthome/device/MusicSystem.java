@@ -1,4 +1,4 @@
-package org.example.smarthome;
+package org.example.smarthome.device;
 
 public class MusicSystem implements Device {
     private boolean isPlaying;

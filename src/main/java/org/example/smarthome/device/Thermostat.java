@@ -1,6 +1,6 @@
-package org.example.smarthome;
+package org.example.smarthome.device;
 
-public class Thermostat implements Device{
+public class Thermostat implements Device {
     private int temperature;
 
     public Thermostat() {
