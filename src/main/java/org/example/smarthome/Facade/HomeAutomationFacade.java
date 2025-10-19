@@ -7,12 +7,16 @@ public class HomeAutomationFacade {
     private Device securityCamera;
     private Device musicSystem;
     private Device thermostat;
+    private Device smartFridge;
+    private Device smartOven;
 
-    public HomeAutomationFacade(Device light, Device securityCamera, Device musicSystem, Device thermostat) {
+    public HomeAutomationFacade(Device light, Device securityCamera, Device musicSystem, Device thermostat, Device smartFridge, Device smartOven) {
         this.light = light;
         this.securityCamera = securityCamera;
         this.musicSystem = musicSystem;
         this.thermostat = thermostat;
+        this.smartFridge = smartFridge;
+        this.smartOven = smartOven;
     }
     public void activateNightMode() {
         System.out.println("Activating night mode");
@@ -22,6 +26,9 @@ public class HomeAutomationFacade {
         thermostat.operate();
         System.out.println("Enabling security camera");
         securityCamera.operate();
+
+        if(smartFridge != null) smartFridge.operate();
+        if(smartOven != null) smartOven.operate();
     }
 
     public void startPartyMode() {
@@ -30,6 +37,9 @@ public class HomeAutomationFacade {
         light.operate();
         System.out.println("Playing music");
         musicSystem.operate();
+
+        if(smartFridge != null) smartFridge.operate();
+        if(smartOven != null) smartOven.operate();
     }
 
     public void leaveHome() {
@@ -42,6 +52,9 @@ public class HomeAutomationFacade {
         musicSystem.operate();
         System.out.println("Turning off the light");
         light.operate();
+
+        if(smartFridge != null) smartFridge.operate();
+        if(smartOven != null) smartOven.operate();
     }
 
 }
