@@ -16,22 +16,31 @@ public class HomeAutomationFacade {
     }
     public void activateNightMode() {
         System.out.println("Activating night mode");
+        System.out.println("Turning off the light");
         light.operate();
+        System.out.println("Setting thermostat to eco mode");
         thermostat.operate();
+        System.out.println("Enabling security camera");
         securityCamera.operate();
     }
 
     public void startPartyMode() {
         System.out.println("Starting party mode");
+        System.out.println("Turning on the light with dim effect");
         light.operate();
+        System.out.println("Playing music");
         musicSystem.operate();
     }
 
     public void leaveHome() {
         System.out.println("Leaving home");
+        System.out.println("Turning off the thermostat");
         thermostat.operate();
+        System.out.println("Turning off the security camera");
         securityCamera.operate();
+        System.out.println("Turning off the music system");
         musicSystem.operate();
+        System.out.println("Turning off the light");
         light.operate();
     }
 
