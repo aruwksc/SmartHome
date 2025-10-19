@@ -10,6 +10,10 @@ public class DeviceFactory {
         SECURITY_CAMERA
     }
     public static Device createDevice(DeviceType deviceType) {
+        if(deviceType == null) {
+            throw new IllegalArgumentException("deviceType is null");
+        }
+
         switch (deviceType) {
             case LIGHT:
                 return new Light();
