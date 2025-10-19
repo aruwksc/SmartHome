@@ -14,17 +14,12 @@ public class DeviceFactory {
             throw new IllegalArgumentException("deviceType is null");
         }
 
-        switch (deviceType) {
-            case LIGHT:
-                return new Light();
-            case MUSIC_SYSTEM:
-                return new MusicSystem();
-             case THERMOSTAT:
-                 return new Thermostat();
-             case SECURITY_CAMERA:
-                  return new SecurityCamera();
-              default:
-                   throw new IllegalArgumentException("Unknown device type");
-        }
+        return switch (deviceType) {
+            case LIGHT -> new Light();
+            case MUSIC_SYSTEM -> new MusicSystem();
+            case THERMOSTAT -> new Thermostat();
+            case SECURITY_CAMERA -> new SecurityCamera();
+            default -> throw new IllegalArgumentException("Unknown device type");
+        };
     }
 }
