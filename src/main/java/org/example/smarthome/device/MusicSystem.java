@@ -1,7 +1,10 @@
 package org.example.smarthome.device;
 
+import org.example.smarthome.Bridge.DeviceControlBridge;
+
 public class MusicSystem implements Device {
     private boolean isPlaying;
+    private DeviceControlBridge controller;
 
     public MusicSystem() {
         this.isPlaying = false;
@@ -16,4 +19,13 @@ public class MusicSystem implements Device {
             isPlaying = true;
         }
     }
+    public void setController(DeviceControlBridge controller) {
+        this.controller = controller;
+    }
+    public void controlDevice() {
+        if(controller != null) {
+            controller.playMusic();
+        }
+    }
+
 }

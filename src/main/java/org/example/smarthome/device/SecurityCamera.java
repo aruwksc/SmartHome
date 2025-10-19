@@ -1,7 +1,10 @@
 package org.example.smarthome.device;
 
+import org.example.smarthome.Bridge.DeviceControlBridge;
+
 public class SecurityCamera implements Device {
     private boolean isRecording;
+    private DeviceControlBridge controller;
 
     public SecurityCamera(){
         this.isRecording = false;
@@ -16,4 +19,13 @@ public class SecurityCamera implements Device {
             isRecording = true;
         }
     }
+    public void setController(DeviceControlBridge controller) {
+        this.controller = controller;
+    }
+    public void controlDevice() {
+        if(controller != null) {
+            controller.turnOn();
+        }
+    }
+
 }
