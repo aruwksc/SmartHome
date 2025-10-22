@@ -1,0 +1,116 @@
+/* Основные настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fce4ec; /* светлый розовый фон */
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #ec407a; /* розовый цвет для заголовка */
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.control-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.device-control {
+    background-color: #ffffff; /* Белый фон для блоков */
+    padding: 20px;
+    border-radius: 10px; /* скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ec407a; /* Розовая рамка */
+}
+
+.device-control h2 {
+    color: #ec407a; /* Розовый цвет для заголовков */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.device-control button {
+    background-color: #ec407a; /* Розовый цвет для кнопок */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Скругленные углы для кнопок */
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.device-control button:hover {
+    background-color: #f06292; /* Более светлый розовый при наведении */
+}
+
+.add-device {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 1px solid #ec407a;
+}
+
+.add-device input, .add-device select, .add-device textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #f06292; /* Светло-розовая рамка для полей ввода */
+    font-size: 16px;
+}
+
+.add-device button {
+    background-color: #ec407a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.add-device button:hover {
+    background-color: #f06292;
+}
+
+#deviceList {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #ec407a;
+}
+
+#deviceList h3 {
+    font-size: 24px;
+    color: #ec407a;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 8px 0;
+    color: #333;
+}

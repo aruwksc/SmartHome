@@ -1,5 +1,6 @@
 package org.example.smarthome.adapter;
 
+import org.example.smarthome.device.Device;
 import org.example.smarthome.device.SmartFridge;
 
 public class SmartFridgeAdapter implements DeviceAdapter{
@@ -13,6 +14,22 @@ public class SmartFridgeAdapter implements DeviceAdapter{
         System.out.println("Operating SmartFridge");
         smartFridge.adjustTemperature();
     }
+
+    @Override
+    public String getName() {
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
+
+    @Override
+    public String getRoom() {
+        return "";
+    }
+
     @Override
     public void connect() {
         System.out.println("Connecting SmartFridge");

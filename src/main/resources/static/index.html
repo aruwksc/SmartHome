@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Smart Home Control</h1>
+</header>
+
+<div class="control-container">
+    <!-- Device Controls -->
+    <div class="device-control" id="light-control">
+        <h2>Light Control</h2>
+        <button class="btn" onclick="turnOnLight()">Turn On</button>
+        <button class="btn" onclick="turnOffLight()">Turn Off</button>
+    </div>
+
+    <div class="device-control" id="music-control">
+        <h2>Music System Control</h2>
+        <button class="btn" onclick="playMusic()">Play Music</button>
+        <button class="btn" onclick="stopMusic()">Stop Music</button>
+    </div>
+
+    <div class="device-control" id="thermostat-control">
+        <h2>Thermostat Control</h2>
+        <button class="btn" onclick="increaseTemperature()">Increase Temperature</button>
+        <button class="btn" onclick="decreaseTemperature()">Decrease Temperature</button>
+        <p id="temperature-status">Current Temperature: 22°C</p>
+    </div>
+
+    <div class="device-control" id="camera-control">
+        <h2>Security Camera Control</h2>
+        <button class="btn" onclick="turnOnCamera()">Turn On</button>
+        <button class="btn" onclick="turnOffCamera()">Turn Off</button>
+    </div>
+
+    <div class="device-control" id="modes-control">
+        <h2>Modes</h2>
+        <button class="btn" onclick="activatePartyMode()">Activate Party Mode</button>
+        <button class="btn" onclick="activateNightMode()">Activate Night Mode</button>
+        <button class="btn" onclick="leaveHome()">Leave Home</button>
+    </div>
+
+    <!-- Add New Device Form -->
+    <div class="add-device">
+        <h2>Add New Device</h2>
+        <form id="deviceForm">
+            <input type="text" id="deviceName" placeholder="Device Name" required>
+
+            <!-- Device Type Dropdown -->
+            <select id="deviceType">
+                <option value="Light">Light</option>
+                <option value="Thermostat">Thermostat</option>
+                <option value="MusicSystem">Music System</option>
+                <option value="SecurityCamera">Security Camera</option>
+            </select>
+
+            <!-- Room Dropdown -->
+            <select id="deviceRoom">
+                <option value="Living Room">Living Room</option>
+                <option value="Bedroom">Bedroom</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Bathroom">Bathroom</option>
+            </select>
+
+            <textarea id="deviceDescription" placeholder="Description" required></textarea>
+            <button type="submit" class="btn">Add Device</button>
+        </form>
+    </div>
+
+    <!-- List of Devices -->
+    <div id="deviceList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

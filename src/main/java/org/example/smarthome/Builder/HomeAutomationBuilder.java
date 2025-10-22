@@ -11,12 +11,16 @@ public class HomeAutomationBuilder {
     private Device musicSystem;
     private Device thermostat;
     private Device securityCamera;
-    
+
+    private static final String DEFAULT_NAME = "Device";
+    private static final String DEFAULT_DESCRIPTION = "Smart Home Device";
+    private static final String DEFAULT_ROOM = "Living Room";
+
     public HomeAutomationBuilder() {
-        this.light = new Light();
-        this.musicSystem = new MusicSystem();
-        this.thermostat = new Thermostat();
-        this.securityCamera = new SecurityCamera();
+        this.light = new Light(DEFAULT_NAME, DEFAULT_DESCRIPTION, DEFAULT_ROOM);
+        this.musicSystem = new MusicSystem(DEFAULT_NAME, DEFAULT_DESCRIPTION, DEFAULT_ROOM);
+        this.thermostat = new Thermostat(DEFAULT_NAME, DEFAULT_DESCRIPTION, DEFAULT_ROOM);
+        this.securityCamera = new SecurityCamera(DEFAULT_NAME, DEFAULT_DESCRIPTION, DEFAULT_ROOM);
     }
     public HomeAutomationBuilder setLight(Device light) {
         this.light = light;
@@ -42,7 +46,8 @@ public class HomeAutomationBuilder {
         this.musicSystem = new RemoteAccessDecorator(this.musicSystem);
         return this;
     }
-    public HomeAutomationBuilder addEnergySavingTothermostat() {
+
+    public HomeAutomationBuilder addEnergySavingToThermostat() {
         this.thermostat = new EnergySavingDecorator(this.thermostat);
         return this;
     }
